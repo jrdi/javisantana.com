@@ -8,7 +8,7 @@ layout: default2
   <p>I'm Javi Santana and I work in the intersection of data and software. Let's get to the point:</p>
   <ul>
     <li>Contact me at javi @ company I work for</li>
-    <li>I write on twitter <a href="http://twitter.com/javisantana">twitter</a></li>
+    <li>I write on <a href="http://twitter.com/javisantana">twitter</a></li>
     <li>Check what I've been doing for a living on <a href="http://www.linkedin.com/in/javisantana">linkedin</a></li>
   </ul>
   <p>This is what I write (I also have a <a href="https://javisantana.substack.com/">mailing list</a> but it's mostly Spanish</p>
