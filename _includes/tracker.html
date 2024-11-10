@@ -1,7 +1,25 @@
 
 <!--<script src="https://cdn.tinybird.co/v1/tinybird.js"></script>-->
  <script src="https://unpkg.com/@tinybirdco/flock.js" data-host="https://api.tinybird.co" data-token="p.eyJ1IjogIjM5ZjBiNjdiLThjODQtNDU2Zi1iZTdmLWQ4MDhmMzhjN2YxMCIsICJpZCI6ICIwZWNiOTAzMi00ZTY0LTQwYjUtOWFlZi1hZmNlZTRiM2Y2NzkifQ.l2HdpANtMERBASSMOP1FOpG7kvukkVk2MSpg0iDOiYk"></script>
+ 
+ <script>
+  function trackLinkClicks(event) {
+  const link = event.target.closest('a'); // Finds the nearest anchor element
+  if (link) {
+    const linkURL = link.href;
+    const linkText = link.textContent || link.innerText;
 
+    Tinybird.trackEvent('add_to_cart', {
+      linkURL: linkURL,
+      linkText: linkText,
+    })
+  }
+  }
+
+  // Attach event listener to the document
+  document.addEventListener('click', trackLinkClicks);
+
+ </script>
   <!--
 <script>
   (function(t,i0,n,y,b,i1,r,d){t[y]=t[y]||[];var z=i0.getElementsByTagName(n)[0],w=i0.createElement(n),fn=y!='tbt'?'&f='+y:'',a=!!i1?'&a='+i1:'',da=!!r?'&d='+r:'',h=!!d?'&h='+encodeURIComponent(d):'';
