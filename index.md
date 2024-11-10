@@ -73,5 +73,5 @@ layout: default2
     {% include subscribe.html %}
   </div>
 </div>
-  {% include js_multilanugage.html %}
+  {% include js_multilangage.html %}
 
