@@ -9,7 +9,7 @@
     const linkURL = link.href;
     const linkText = link.textContent || link.innerText;
 
-    Tinybird.trackEvent('add_to_cart', {
+    Tinybird.trackEvent('click', {
       linkURL: linkURL,
       linkText: linkText,
     })
