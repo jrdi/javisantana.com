@@ -5,13 +5,17 @@ layout: default2
 {% include header_small.html %}
 
 <div id="english">
-  <p>I'm Javi Santana and I spend my time developing software products. Let's get to the point:</p>
+  <p>I'm Javi Santana and I work in the intersection of data and software. Let's get to the point:</p>
   <ul>
     <li>Contact me at javi @ company I work for</li>
-    <li>I write on twitter <a href="http://twitter.com/javisantana">twitter</a> and my <a href="/blog/">blog</a> (mostly spanish tho)</li>
+    <li>I write on twitter <a href="http://twitter.com/javisantana">twitter</a></li>
     <li>Check what I've been doing for a living on <a href="http://www.linkedin.com/in/javisantana">linkedin</a></li>
   </ul>
-  <p>This is what I write (99% spanish, sorry)</p>
+  <p>This is what I write (I also have a <a href=https://javisantana.substack.com/">mailing list</a> but it's mostly Spanish</p>
+  <ul class="home-post-list">
+      {% for post in site.fastdata %} {% if post.title != "Index" %}<li style="list-style-type: none;"><a href="{{site.url}}{{post.url}}">{{ post.title }}</a></li>{%endif %}{% endfor %}
+  </ul>
+
 </div>
 
 <div id="spanish">
@@ -20,9 +24,10 @@ layout: default2
   <p>Algunos cosas que puedes hacer: <a href="/about">saber quien soy</a>, <a href="mailto://javi@company I work for">contactarme por correo</a>, leer lo que escribo en <a href="http://twitter.com/javisantana">twitter</a> o revisar mi historial laboral en <a href="http://www.linkedin.com/in/javisantana">linkedin</a>.
   </p>
   <p style="margin-top: 30px">Lo que escribo y que a veces coincide con lo que pienso:</p>
-</div>
+
   <div>
-    <h2>En mi lista de correo (<a href="https://javisantana.substack.com/">suscríbete</a>)</h2>
+    <h2>Tengo una lista de correo, (<a href="https://javisantana.substack.com/">echa un ojo y suscríbete</a>)</h2>
+    <!--
     <ul class="home-post-list">
       <li><a href="https://javisantana.substack.com/p/el-brazo-bionico">El brazo biónico</a> </li>
       <li><a href="https://javisantana.substack.com/p/por-que">¿Por qué?</a></li>  
@@ -36,6 +41,7 @@ layout: default2
       <li><a href="https://javisantana.substack.com/p/a-la-segunda-todo-sale-bien-la-recetita">A la segunda todo sale bien: la recetita</a> </li>
       <li><a href="https://javisantana.substack.com/p/a-la-segunda-todo-sale-bien-el-end">A la segunda todo sale bien:el end-to-end developer</a> </li>
     </ul>
+    -->
     
     {% for post in site.posts limit:1000 %}
 
@@ -66,5 +72,6 @@ layout: default2
     <p>Te aviso cada vez que escriba algo, aunque siempre lo vas a poder leer aquí.</p>
     {% include subscribe.html %}
   </div>
-  
+</div>
   {% include js_multilanguage.html %}
+
