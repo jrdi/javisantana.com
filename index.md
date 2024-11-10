@@ -27,7 +27,7 @@ layout: default2
   <p style="margin-top: 30px">Lo que escribo y que a veces coincide con lo que pienso:</p>
 
   <div>
-    <h2>Tengo una lista de correo, <a href="https://javisantana.substack.com/">echa un ojo y suscríbete</a></h2>
+    <p>Escribo alguna que otra cosa de vez en cuando pero últimamente escribo en mi lista de correo, <a href="https://javisantana.substack.com/">echa un ojo y suscríbete</a></p>
     <!--
     <ul class="home-post-list">
       <li><a href="https://javisantana.substack.com/p/el-brazo-bionico">El brazo biónico</a> </li>
