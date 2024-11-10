@@ -10,6 +10,7 @@ layout: default2
     <li>Contact me at javi @ company I work for</li>
     <li>I write on <a href="http://twitter.com/javisantana">twitter</a></li>
     <li>Check what I've been doing for a living on <a href="http://www.linkedin.com/in/javisantana">linkedin</a></li>
+    <li>What <a href="/inspiration">inspires me</a></li>
   </ul>
   <p>This is what I write (I also have a <a href="https://javisantana.substack.com/">mailing list</a> but it's mostly Spanish)</p>
   <ul class="home-post-list">
@@ -73,5 +74,5 @@ layout: default2
     {% include subscribe.html %}
   </div>
 </div>
-  {% include js_multilangage.html %}
+  {% include js_multilanguage.html %}
 
