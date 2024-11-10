@@ -11,7 +11,7 @@ layout: default2
     <li>I write on twitter <a href="http://twitter.com/javisantana">twitter</a></li>
     <li>Check what I've been doing for a living on <a href="http://www.linkedin.com/in/javisantana">linkedin</a></li>
   </ul>
-  <p>This is what I write (I also have a <a href=https://javisantana.substack.com/">mailing list</a> but it's mostly Spanish</p>
+  <p>This is what I write (I also have a <a href="https://javisantana.substack.com/">mailing list</a> but it's mostly Spanish</p>
   <ul class="home-post-list">
       {% for post in site.fastdata %} {% if post.title != "Index" %}<li style="list-style-type: none;"><a href="{{site.url}}{{post.url}}">{{ post.title }}</a></li>{%endif %}{% endfor %}
   </ul>
@@ -73,5 +73,5 @@ layout: default2
     {% include subscribe.html %}
   </div>
 </div>
-  {% include js_multilanguage.html %}
+  {% include js_multilanugage.html %}
 
