@@ -3,3 +3,6 @@
 .DS_Store
 a
 .jekyll-cache
+vendor
+ee
+_posts/_site/*.html
