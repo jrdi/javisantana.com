@@ -45,6 +45,7 @@ published: true
 
 — Chapter 6: Fear and Failure > Page 112
 
+<!--break-->
 
 > Getting middle managers to tolerate (and not feel threatened by) problems and surprises is one of our most important jobs;
 

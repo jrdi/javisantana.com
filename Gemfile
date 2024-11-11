@@ -5,4 +5,6 @@ gem "rouge"
 gem "kramdown"
 gem "jekyll-watch"
 
-gem "webrick", "~> 1.7"
+#gem "webrick", "~> 1.7"
+
+gem "webrick", "~> 1.9"
