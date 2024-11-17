@@ -3,14 +3,15 @@ layout: base_data
 ---
 <div class="container">
   <div class="entry">
-    <h1><a href="/fastdata">≗</a> {{page.title}} — <span><a href="https://twitter.com/javisantana">@javisantana</a></span></h1>
+    <h1> <a href="/">≗</a> {{page.title}} — <span><a href="https://twitter.com/javisantana">@javisantana</a></span></h1>
     {{page.content}}
   </div>
 
   <div class="entry more">
     <h2>More posts</h2>
     <ul>
-  {% for post in site.fastdata limit:5 %}
+      {% assign alldocs = site.posts | concat: site.inspiration |  concat: site.fastdata | sort:"date" | reverse%}	
+  {% for post in alldocs limit:10 %}
   {% if post.url != page.url %} 
   {% if post.title != "Index" %}
   <li><a href="{{site.url}}{{post.url}}">{{ post.title }}</a> </li> 
@@ -19,7 +20,7 @@ layout: base_data
   {% endfor %}
     <ul>
   </div>
-  <div class="entry more close"><a href="/fastdata">≗</a> </div>
+  <div class="entry more close"><a href="/">≗</a> </div>
 </div>
 
 

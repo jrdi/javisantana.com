@@ -3,6 +3,7 @@ layout: data
 published: true
 name: Data engineer skills
 tags: en, API, data
+date: 2024-11-01
 ---
 
 I recently published [a data engineer job offer](https://www.tinybird.co/job-offers/data-engineer). To be honest, it's not the most creative offer you are going to read, it starts with the typical description pretending your startup is different with a list of really nice angel investors, what we offer, what we look for, and an extra section on how a day looks like from my point of view (I tried to show the reality rather than posting images of someone happily working)

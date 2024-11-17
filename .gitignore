@@ -6,3 +6,8 @@ a
 vendor
 ee
 _posts/_site/*.html
+.swk
+.swl
+.swm
+.swn
+.swo

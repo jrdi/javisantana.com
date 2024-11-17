@@ -3,6 +3,7 @@ layout: data
 published: true
 name: Principles of data engineering
 tags: en, api, data
+date: 2024-06-01
 ---
 
 We often think there is a right way to do things. Reality tells us again and again that the path is not as important as the experience you gain in doing things that way.

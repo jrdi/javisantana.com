@@ -3,6 +3,7 @@ layout: data
 published: true
 name: Usage based billing on data products
 tags: en, API, data
+date: 2024-11-01
 ---
 
 Every time I go to the $MY_CLOUD_PROVIDER console to understand how much I'm spending in some particular thing I end up giving up. That's not a $MY_CLOUD_PROVIDER thing, almost all the service providers that bill you by usage provide interfaces that are hard to understand.

@@ -1,78 +1,41 @@
 ---
-layout: default2
+layout: base_data
 ---
 
-{% include header_small.html %}
+<div class="container desierto">
+  <div class="entry space">
+  <h1><span>@javisantana</span></h1>
+  <p style="margin-bottom: 7em;font-size: 120%">I'm tech person, cofounder of <a href="https://tinybird.co">Tinybird</a>. Find me on <a href="http://twitter.com/javisantana">twitter</a>, <a href="http://www.linkedin.com/in/javisantana">linkedin</a> or javi@mycompanyname</p>
+  </div>
 
-<div id="english">
-  <p>I'm Javi Santana and I work in the intersection of data and software. Let's get to the point:</p>
-  <ul>
-    <li>Contact me at javi @ company I work for</li>
-    <li>I write on <a href="http://twitter.com/javisantana">twitter</a></li>
-    <li>Check what I've been doing for a living on <a href="http://www.linkedin.com/in/javisantana">linkedin</a></li>
-    <li>What <a href="/inspiration">inspires me</a></li>
-  </ul>
-  <p>This is what I write (I also have a <a href="https://javisantana.substack.com/">mailing list</a> but it's mostly Spanish)</p>
-  <ul class="home-post-list">
-      {% for post in site.fastdata %} {% if post.title != "Index" %}<li style="list-style-type: none;"><a href="{{site.url}}{{post.url}}">{{ post.title }}</a></li>{%endif %}{% endfor %}
-  </ul>
 
-</div>
-
-<div id="spanish">
-  <p>Hola, diseño software de alto rendimiento en <a href="https://tinybird.co">Tinybird</a>.</p>
-  
-  <p>Algunos cosas que puedes hacer: <a href="/about">saber quien soy</a>, <a href="mailto://javi@company I work for">contactarme por correo</a>, leer lo que escribo en <a href="http://twitter.com/javisantana">twitter</a> o revisar mi historial laboral en <a href="http://www.linkedin.com/in/javisantana">linkedin</a>.
-  </p>
-  <p style="margin-top: 30px">Lo que escribo y que a veces coincide con lo que pienso:</p>
-
-  <div>
-    <p>Escribo alguna que otra cosa de vez en cuando pero últimamente escribo en mi lista de correo, <a href="https://javisantana.substack.com/">echa un ojo y suscríbete</a></p>
-    <!--
-    <ul class="home-post-list">
-      <li><a href="https://javisantana.substack.com/p/el-brazo-bionico">El brazo biónico</a> </li>
-      <li><a href="https://javisantana.substack.com/p/por-que">¿Por qué?</a></li>  
-      <li><a href="https://javisantana.substack.com/p/puede-chatgpt-trabajar-en-tinybird">Puede chatGPT trabajar en Tinybird</a> </li>
-    </ul>
-    <h3>Temporada "a la segunda todo sale bien"</h3>
-    <p>Una serie sobre algunas de las cosas que pienso después de volver a montar un equipo desde cero</p>
-    <ul class="home-post-list">
-      <li><a href="https://javisantana.substack.com/p/a-la-segunda-todo-sale-bien-la-espada">A la segunda todo sale bien: la espada de Damocles</a> </li>
-      <li><a href="https://javisantana.substack.com/p/a-la-segunda-siempre-sale-bien-el">A la segunda todo sale bien: el soporte técnico</a> </li>
-      <li><a href="https://javisantana.substack.com/p/a-la-segunda-todo-sale-bien-la-recetita">A la segunda todo sale bien: la recetita</a> </li>
-      <li><a href="https://javisantana.substack.com/p/a-la-segunda-todo-sale-bien-el-end">A la segunda todo sale bien:el end-to-end developer</a> </li>
-    </ul>
-    -->
+  {% assign alldocs = site.posts | concat: site.inspiration |  concat: site.fastdata | sort:"date"%}	
     
-    {% for post in site.posts limit:1000 %}
 
-      {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-      {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-
-      {% if forloop.first %}
-      <h2 id="{{ this_year }}-ref">{{this_year}}</h2>
-      <ul class="home-post-list">
-      {% endif %}
-
-      <li>
-      <!--<time>{{ post.date | date: "%b %-d"}}</time>--><a href="{{site.url}}{{post.url}}">{{ post.title }}</a> </li> 
-
-      {% if forloop.last %}
-      </ul>
-      {% else %}
-          {% if this_year != next_year %}
-          </ul>
-          <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
-          <ul class="home-post-list">
-          {% endif %}
-      {% endif %}
-
-    {% endfor %}
-  </div>
-  <div class="footer">
-    <p>Te aviso cada vez que escriba algo, aunque siempre lo vas a poder leer aquí.</p>
-    {% include subscribe.html %}
-  </div>
-</div>
-  {% include js_multilanguage.html %}
-
+   {% for post in alldocs reversed %}
+   {% if post.title != "Index" %}
+        {% if forloop.index < 40 %}
+        <div class="entry space" id="{{post.slug}}">
+        {% else %}
+        <div class="entry " id="{{post.slug}}">
+        {% endif %}
+            {% if post.title %} 
+            <h2>{{post.title}} {% if forloop.index < 40 %}<a href="#{{ post.slug }}">#</a>{% endif %}</h2>
+        
+            {% endif %}
+            <a href="{{ post.url }}"><span class="date">{{ post.date | date: "%b %d, %Y" }}</span></a>
+            {% if post.collection != "inspiration" %}
+              {% if forloop.index < 40 %}
+              <p>{{ post.content | strip_html | truncatewords: 50 }}
+              <a href="{{ post.url }}">read more</a>
+              </p>
+              {% endif %}
+            {% else %}
+              {{ post.content | split:'<!--break-->' | first }}
+              {% if post.content contains '<!--break-->' %}
+                  <a href="{{ post.url }}">read more</a>
+              {% endif %}
+            {% endif %}
+        </div>
+    {%endif %}
+  {% endfor %}
