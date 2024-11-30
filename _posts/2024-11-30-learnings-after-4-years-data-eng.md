@@ -46,7 +46,7 @@ Some practical learnings, in no particular order:
 
 - Most people don't have an intuition about what current hardware can and can't do. There is a simple math that can help you with that: "you can process about 500MB in one second on a single machine". I know it's not a universal truth and there are a lot of details that can change that but believe me, this estimation is a pretty good tool to have under your belt.
 
-- Let me finish with this, and it hurts: Most companies just need basic bash / make knowledge, a single instance SQL processing engine (DuckDB, CHDB or a few python scripts), a distributed file system, git and a developer workflow (CI/CD). Everything else is sugar and enterprise stuff. Not saying these last ones aren't important, but the basics should be well covered, otherwise you'll have a huge mess. I'm still surprised by how quickly we forget about the good practices we have learned over the years in software engineering (testing, deploymeny, collaboration, monitoring and so on)
+- Let me finish with this, and it hurts: Most companies just need basic bash / make knowledge, a single instance SQL processing engine (DuckDB, CHDB or a few python scripts), a distributed file system, git and a developer workflow (CI/CD). Everything else is sugar and enterprise stuff. Not saying these last ones aren't important, but the basics should be well covered, otherwise you'll have a huge mess. I'm still surprised by how quickly we forget about the good practices we have learned over the years in software engineering (testing, deployment, collaboration, monitoring and so on)
 
 
 I learned a lot more things about people itself, but that's another story.
