@@ -1,0 +1,19 @@
+name: Tinybird CI
+
+on:
+  push:
+    branches: [ gh-pages ]
+  pull_request:
+    branches: [ gh-pages ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Install Tinybird CLI
+        run: curl -LsSf https://api.tinybird.co/static/install.sh | sh
+        
+      - name: build the project
+        run: cd tinybird_stats && tb build
