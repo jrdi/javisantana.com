@@ -1,0 +1,13 @@
+TOKEN "subscriptions_append" APPEND
+
+
+SCHEMA >
+    `email` String `json:$.email`,
+    `timestamp` DateTime64(3) `json:$.timestamp`,
+    `source` String `json:$.source`,
+    `reason` String `json:$.reason`,
+    `unsubscribe` Int32 `json:$.unsubscribe`
+
+ENGINE "MergeTree"
+ENGINE_PARTITION_KEY "toYear(timestamp)"
+ENGINE_SORTING_KEY "timestamp, email"

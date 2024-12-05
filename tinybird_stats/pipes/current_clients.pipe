@@ -1,0 +1,8 @@
+TOKEN "current_clients_endpoint_read_4277" READ
+
+NODE untitled_pipe_3569_0
+SQL >
+
+    SELECT uniq(session_id) AS visits FROM analytics_hits      WHERE timestamp >= (now() - interval 1 minute)
+
+
